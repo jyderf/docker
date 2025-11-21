@@ -1,0 +1,16 @@
+services:
+  servicio1:
+    build:
+      context: ./Proyecto_1
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    # Otras configuraciones para servicio1
+
+  servicio2:
+    build:
+      context: ./Proyecto_2
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    # Otras configuraciones para servicio2

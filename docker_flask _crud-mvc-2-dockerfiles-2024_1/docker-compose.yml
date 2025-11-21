@@ -1,0 +1,52 @@
+version: '3.9'
+services:
+  db:
+    build:
+      context: ./informacion
+    container_name: db
+    restart: no
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_DATABASE: "municipios"
+    networks:
+      - wpsite
+  web:
+    build: ./app
+    container_name: web
+    restart: no
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app/proyecto:/app
+    environment:
+      FLASK_APP: "app.py"
+      FLASK_ENV: "development"
+      MYSQL_HOST: "db"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "1234"
+      MYSQL_DB: "municipios"
+    depends_on:
+      - db
+    networks:
+      - wpsite
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: no
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: "db"
+      PMA_USER: "root"
+      PMA_PASSWORD: "1234"
+    networks:
+      - wpsite
+
+
+networks:
+  wpsite:
+
+

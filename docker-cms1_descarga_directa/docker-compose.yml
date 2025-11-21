@@ -1,0 +1,24 @@
+services:
+  mi_plantilla:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0.30
+    command: --default-authentication-plugin=mysql_native_password
+    environment:     
+      MYSQL_ROOT_PASSWORD: '1234'
+      MYSQL_DATABASE: 'cms'
+      MYSQL_PASSWORD: '1234'
+      MYSQL_ROOT_HOST: '%'    
+
+    volumes:
+      - ./docker/mysql-data:/var/lib/mysql
+    
+    ports:
+      - "3306:3306"
+
+    

@@ -1,0 +1,4 @@
+DROP SCHEMA IF EXISTS cms;
+CREATE SCHEMA cms;
+USE cms;
+

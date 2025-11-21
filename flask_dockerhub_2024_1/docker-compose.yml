@@ -1,0 +1,52 @@
+version: '3.9'
+services:
+  db:
+    image: afjacanamijoy/municipios_mysql:1.0      
+    container_name: db
+    restart: no
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_DATABASE: "municipios"
+    networks:
+      - mi_red
+
+  web:
+    image: afjacanamijoy/municipios_flask:1.0
+    container_name: web
+    restart: no
+    ports:
+      - "5000:5000"    
+    environment:
+      FLASK_APP: "app.py"
+      FLASK_ENV: "development"
+      MYSQL_HOST: "db"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "1234"
+      MYSQL_DB: "municipios"
+    depends_on:
+      - db
+    networks:
+      - mi_red
+
+  phpmyadmin:
+    image: afjacanamijoy/municipios_phpmyadmin:1.0
+    container_name: phpmyadmin
+    restart: no
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: "db"
+      PMA_USER: "root"
+      PMA_PASSWORD: "1234"
+    networks:
+      - mi_red
+
+
+networks:
+  mi_red:
+    driver: bridge
+
+
+

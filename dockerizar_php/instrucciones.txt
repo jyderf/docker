@@ -1,0 +1,12 @@
+correr el docker-compose.yaml así:
+
+docker-compose up -d
+
+si haces modificaciones, córrelo así:
+
+Primero baja los contenedores borrando los errores: 
+	docker-compose down -v
+
+Segundo sube los contenedores reconstruyendo:
+	 budocker-compose up -d --build
+

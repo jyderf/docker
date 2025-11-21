@@ -1,0 +1,35 @@
+services:
+  servicio1:
+    build:
+      context: ./proyecto1
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+
+  servicio2:
+    build:
+      context: ./proyecto2
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+
+  servicio3:
+    build:
+      context: ./proyecto3
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+
+  servicio4:
+    build:
+      context: ./proyecto4
+      dockerfile: Dockerfile
+    ports:
+      - "8083:80"
+
+  servicio5:
+    build:
+      context: ./proyecto5
+      dockerfile: Dockerfile
+    ports:
+      - "8084:80"

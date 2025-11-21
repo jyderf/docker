@@ -1,0 +1,6 @@
+docker build -t nombre_de_tu_imagen .
+
+docker run -p 8080:80 -d nombre_de_tu_imagen
+
+
+Navegador : localhost:8080

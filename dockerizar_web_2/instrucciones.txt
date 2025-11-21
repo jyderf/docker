@@ -1,0 +1,15 @@
+Abre una terminal, navega al directorio que contiene tu Dockerfile y ejecuta el siguiente comando:
+
+docker build -t nombre_imagen .
+
+Esto construirá la imagen Docker usando el Dockerfile en el directorio actual. Puedes reemplazar "nombre_imagen"
+ con el nombre que desees para tu imagen.
+
+ Ejecuta el contenedor:
+Después de construir la imagen, puedes ejecutar un contenedor utilizando el siguiente comando:
+
+docker run -p 8080:80 nombre_imagen
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nombre_del_contenedor_o_id #ES PARA OBTENER LA IP
+
+

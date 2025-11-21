@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: '1234'  # Reemplaza con tu contraseña
+      MYSQL_DATABASE: 'municipios'
+      MYSQL_PASSWORD: '1234'  # Reemplaza con tu contraseña (puede ser la misma que para root)
+      MYSQL_ROOT_HOST: '%'
+     
+    volumes:
+      - ./creacion_municipios.sql:/docker-entrypoint-initdb.d/database.sql
+    ports:
+      - "3306:3306"  # Mapea el puerto 3306 del contenedor al puerto 3306 del host
+    

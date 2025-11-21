@@ -1,0 +1,12 @@
+título del sitio: Sistemas Distribuidos
+usuario: fredy
+pass: 1234sistem@sdistruibuidos
+email: fredy.ingenieria@gmail.com
+
+LINK EN LOCAL, DEBERÍA SER EL MISMO EN DOCKER:
+http://localhost/mi_cms_2/wordpress/
+
+LINK EN LOCAL COMO ADMIN:
+http://localhost/mi_cms_2/wp-admin
+
+
