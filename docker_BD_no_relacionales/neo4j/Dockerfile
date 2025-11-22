@@ -1,4 +1,5 @@
-FROM neo4j:5
+FROM neo4j:5-enterprise
+
 
 ENV NEO4J_AUTH=neo4j/password123
 ENV NEO4J_PLUGINS='["apoc"]'
