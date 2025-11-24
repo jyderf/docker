@@ -22,7 +22,7 @@
         <?php
         $servername = "mysql"; // Puede ser "localhost" si está en el mismo servidor que tu aplicación
         $username = "root";
-        $password = "1234";
+        $password = "123";
         $dbname = "municipios";
 
         // Crear conexión
