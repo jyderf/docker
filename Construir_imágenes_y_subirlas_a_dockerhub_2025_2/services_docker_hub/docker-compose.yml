@@ -1,0 +1,8 @@
+services:
+  servicio1:
+    image: fredyuniputumayo/prueba1:1.0      
+
+  servicio2:
+    image: fredyuniputumayo/prueba2:1.0
+      
+

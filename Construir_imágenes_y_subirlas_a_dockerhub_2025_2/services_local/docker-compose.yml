@@ -1,14 +1,15 @@
 services:
   servicio1:
+    container_name: ser1
     build:
       context: ./Proyecto_1
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
-    # Otras configuraciones para servicio1
+      - "8080:80"    
 
   servicio2:
+    container_name: ser2
     build: ./Proyecto_2     
     ports:
       - "8081:80"
-    # Otras configuraciones para servicio2
+   
