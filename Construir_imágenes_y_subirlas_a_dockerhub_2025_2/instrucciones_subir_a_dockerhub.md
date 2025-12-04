@@ -9,6 +9,8 @@ docker login
 
 # Subir la imagen a tu repositorio
 docker push miusuario/mi_imagen2:1.0
+
+
 EJEMPLO PARA LLAMAR LAS IMAGENES
 
 services:
