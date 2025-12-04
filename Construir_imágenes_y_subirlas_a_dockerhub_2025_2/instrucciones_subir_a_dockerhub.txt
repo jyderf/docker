@@ -1,0 +1,21 @@
+# Crear imagen desde contenedor
+docker commit ser1 miusuario/mi_imagen1:1.0
+
+# Verificar que la imagen existe
+docker images
+
+# Login a Docker Hub
+docker login
+
+# Subir la imagen a tu repositorio
+docker push miusuario/mi_imagen2:1.0
+
+
+EJEMPLO PARA LLAMAR LAS IMAGENES
+
+services:
+  servicio1:
+    image: fredyuniputumayo/prueba1:1.0      
+
+  servicio2:
+    image: fredyuniputumayo/prueba2:1.0
