@@ -1,4 +1,4 @@
-# Crear imagen desde contenedor
+# Crear imagen desde contenedor: en este caso el contenedor debe existir y puede estar corriendo o detenido
 docker commit ser1 miusuario/mi_imagen1:1.0
 
 # Verificar que la imagen existe
