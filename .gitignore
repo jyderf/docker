@@ -1,0 +1,14 @@
+# Archivos de persistencia y socket de MySQL que causan el error "Function not implemented"
+# Estos archivos son generados automáticamente y no deben estar en Git.
+dockerhub_2025_2/flask_dockerhub/persistencia/mysql.sock
+dockerhub_2025_2/flask_dockerhub/persistencia/auto.cnf
+dockerhub_2025_2/flask_dockerhub/persistencia/binlog.index
+dockerhub_2025_2/flask_dockerhub/persistencia/ib_buffer_pool
+
+# Archivos temporales comunes del sistema operativo Windows
+desktop.ini
+
+# Directorios de caché y temporales de proyectos
+# Esto incluye directorios de persistencia de BD en general y caché de desarrollo.
+**/persistencia/
+**/.codekit-cache/

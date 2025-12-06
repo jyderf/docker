@@ -1,0 +1,15 @@
+services:
+  servicio1:
+    container_name: ser1
+    build:
+      context: ./proyecto_1
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"    
+
+  servicio2:
+    container_name: ser2
+    build: ./proyecto_2     
+    ports:
+      - "8081:80"
+   
